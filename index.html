@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <!-- <script src="imd.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="myForm">
+            <h1>Register form</h1>
+
+            <div class="input">
+                <div class="center md05">
+                    <input type="text" id="data1" placeholder="First.name" name="First">
+                    <p class="alert" id="input1">please fill</p>
+                </div>
+                <div class="center md05">
+                    <input type="text" id="data2" placeholder="Last.name" name="Last">
+                    <p class="alert" id="input2">please fill</p>
+                </div>
+            </div>
+
+            <div class="input">
+                <div class="center md05">
+                    <input type="number" id="data3" placeholder="Mob.no">
+                    <p class="alert" id="input3">please fill</p>
+                </div>
+                <div class="center md05">
+                    <input type="email" id="data4" placeholder="Email.id">
+                    <p class="alert" id="input4">please fill</p>
+                </div>
+            </div>
+
+            <div class="input">
+                <div class="center md05">
+                    <input type="text" id="data5" placeholder="Post">
+                    <p class="alert" id="input5">please fill</p>
+                </div>
+                <div class="center md05">
+                    <input type="text" id="data6" placeholder="Dist">
+                    <p class="alert" id="input6">please fill</p>
+                </div>
+            </div>
+            <div class="input">
+                <div class="center md05">
+                    <label class="sa1">Gender :</label>
+
+                    <input type="radio" name="Gender" class="label1">
+
+                    <label for="gender" class="sd02">Male</label>
+
+                    <input type="radio" name="Gender" class="label2">
+
+                    <label for="gender" class="sd01">Female</label>
+
+                </div>
+                <div class="center md05 lg1">
+                    <select name="qualification" id="data7">  
+                        <option value="">Select</option> 
+                        <option value="qualification">Qualification</option>
+                        <option value="10th">10th</option>
+                        <option value="I.A">I.A</option>
+                        <option value="B.C.A">B.C.A</option>
+                        <option value="M.C.A">M.C.A</option>
+                    </select>
+                    <p class="alert" id="myId">please fill</p>
+                </div>
+            </div>
+            <div class="input">
+                <div class="md05">
+                    <input type="checkbox" name="checkbox" class="sa4">
+                    <label for="text" class="aaq">Agree to term and condition</label>
+                </div>
+            </div>
+            <button onclick="formSubmit()" type="button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        function formSubmit() {          
+            let data1 = document.getElementById("data1").value
+            let data2 = document.getElementById("data2").value
+            let data3 = document.getElementById("data3").value
+            let data4 = document.getElementById("data4").value
+            let data5 = document.getElementById("data5").value
+            let data6 = document.getElementById("data6").value
+            let data7 = document.getElementById("data7").value;
+
+            if (data1 == "") {
+                document.getElementById("input1").style.display = "block"
+            }
+            else {
+                document.getElementById("input1").style.display = "none"
+            }
+
+
+            if (data2 == "") {
+                document.getElementById("input2").style.display = "block"
+            }
+            else {
+                document.getElementById("input2").style.display = "none"
+            }
+
+
+            if (data3 == "") {
+                document.getElementById("input3").style.display = "block"
+            }
+            else {
+                document.getElementById("input3").style.display = "none"
+            }
+
+
+            if (data4 == "") {
+                document.getElementById("input4").style.display = "block"
+            }
+            else {
+                document.getElementById("input4").style.display = "none"
+            }
+
+
+            if (data5 == "") {
+                document.getElementById("input5").style.display = "block"
+            }
+            else {
+                document.getElementById("input5").style.display = "none"
+            }
+
+
+            if (data6 == "") {
+                document.getElementById("input6").style.display = "block"
+            }
+            else {
+                document.getElementById("input6").style.display = "none"
+            }
+
+
+            if (data7 == "") {
+                document.getElementById("myId").style.display = "block"
+            }
+            else {
+                document.getElementById("myId").style.display = "none"
+            }
+        }
+    </script>
+</body>
+
+</html>

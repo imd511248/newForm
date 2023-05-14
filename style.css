@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1140px;
+    margin: auto;
+}
+
+.myForm {
+    margin: 70px 0 100px 0;
+    width: 660px;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+    background-color: #b5d3c9;
+    height: 690px;
+}
+
+.myForm h1 {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    column-gap: 8px;
+}
+
+.input input {
+    font-size: 23px;
+    padding: 5px 0px 5px 15px;
+    background-color: gainsboro;
+    font-family: ui-sans-serif;
+    border: 1px solid red;
+    border-radius: 7px;
+    margin: 10px 5px;
+    width: 296px;
+}
+
+.center select {
+    font-size: 23px;
+    padding: 5px 0px 5px 15px;
+    background-color: gainsboro;
+    font-family: ui-sans-serif;
+    border: 1px solid red;
+    border-radius: 7px;
+    margin: 10px 5px;
+    width: 296px;
+}
+
+.md05 {
+    position: relative;
+}
+
+.alert {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: red;
+    font-weight: 100;
+    position: absolute;
+    bottom: -19px;
+    left: 110px;
+    display: none;
+}
+
+.md05 .label1 {
+    width: 40px;
+    margin-left: -1px;
+    margin-top: 23px;
+}
+
+.md05 .label2 {
+    width: 40px;
+    margin-left: -53px;
+    margin-top: 23px;
+
+}
+
+.sa1 {
+    margin-left: 17px;
+    font-size: 20px;
+}
+
+.sd01 {
+    margin-right: 54px;
+    margin-left: -10px;
+}
+
+.sd02 {
+    margin-right: 54px;
+    margin-left: -10px;
+}
+
+.md05 .sa4 {
+    height: 17px;
+    margin-left: -400px;
+    margin-right: -121px;
+}
+
+.md05 .aaq {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.myForm button {
+    font-size: 20px;
+    padding: 9px 60px;
+    color: #f9f8f8;
+    background-color: darkslateblue;
+    border-radius: 15px;
+    border: 1px solid darkslateblue;
+    transform: translateX(50%);
+}
+.lg1{
+    position: relative;
+}
+#myId{
+    /* position: absolute; */
+    display: none;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .center input {
+        width: 100%;
+        font-size: 20px;
+        margin: 15px 0px;
+    }
+
+    .alert {
+        margin: 16px 0;
+        font-size: 16px;
+        left: 95px;
+    }
+
+    .input {
+        margin-bottom: 0px !important;
+    }
+
+    .myForm {
+        height: 740px;
+    }
+
+    .sd02 {
+        margin-right: 50px;
+    }
+
+    .md05 .sa4 {
+        margin-left: 123px !important;
+        position: absolute;
+        left: -226px;
+        margin: 1px 5px;
+
+        /* font-size: 10px; */
+        /* height: 0; */
+    }
+
+    .md05 .aaq {
+        font-size: 14px;
+        font-family: monospace;
+        margin-left: 65px;
+    }
+
+    .center select {
+        margin: 10px 9px 12px 8px;
+        width: 264px;
+        color: dimgray;
+    }
+
+    .myForm button {
+        transform: translateX(50%);
+        margin: 37px 0px 0 0;
+    }
+}
