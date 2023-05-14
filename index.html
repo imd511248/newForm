@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <form class="myForm">
+        <form class="myForm" onsubmit="">
             <h1>Register form</h1>
 
             <div class="input">
@@ -48,22 +48,32 @@
                 </div>
             </div>
             <div class="input">
+
+
+
+
                 <div class="center md05">
                     <label class="sa1">Gender :</label>
 
-                    <input type="radio" name="Gender" class="label1">
+                    <input type="radio" name="Gender" class="label1" id="maleId">
 
                     <label for="gender" class="sd02">Male</label>
 
-                    <input type="radio" name="Gender" class="label2">
+                    <input type="radio" name="Gender" class="label2" id="femaleId">
 
                     <label for="gender" class="sd01">Female</label>
 
+                    <p class="alert" id="gender">please fill</p>
+
                 </div>
+
+
+
+
+
                 <div class="center md05 lg1">
-                    <select name="qualification" id="data7">  
-                        <option value="">Select</option> 
-                        <option value="qualification">Qualification</option>
+                    <select name="qualification" id="data7">
+                        <option value="">Select</option>
                         <option value="10th">10th</option>
                         <option value="I.A">I.A</option>
                         <option value="B.C.A">B.C.A</option>
@@ -84,7 +94,7 @@
 
     <script>
 
-        function formSubmit() {          
+        function formSubmit() {
             let data1 = document.getElementById("data1").value
             let data2 = document.getElementById("data2").value
             let data3 = document.getElementById("data3").value
@@ -93,59 +103,91 @@
             let data6 = document.getElementById("data6").value
             let data7 = document.getElementById("data7").value;
 
+            let maleId = document.getElementById("maleId").checked
+            let femaleId = document.getElementById("femaleId").checked
+            // debugger
+            let success = false;
+
+            if (!maleId && !femaleId) {
+                document.getElementById("gender").style.display = "block"
+                let success = false;
+            }
+            else {
+                document.getElementById("gender").style.display = "none"
+                let success = true;
+            }
+
             if (data1 == "") {
                 document.getElementById("input1").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("input1").style.display = "none"
+                success = true;
             }
 
 
             if (data2 == "") {
                 document.getElementById("input2").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("input2").style.display = "none"
+                success = true;
             }
 
 
             if (data3 == "") {
                 document.getElementById("input3").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("input3").style.display = "none"
+                success = true;
             }
 
 
             if (data4 == "") {
                 document.getElementById("input4").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("input4").style.display = "none"
+                success = true;
             }
 
 
             if (data5 == "") {
                 document.getElementById("input5").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("input5").style.display = "none"
+                success = true;
             }
 
 
             if (data6 == "") {
                 document.getElementById("input6").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("input6").style.display = "none"
+                success = true;
             }
 
 
             if (data7 == "") {
                 document.getElementById("myId").style.display = "block"
+                success = false;
             }
             else {
                 document.getElementById("myId").style.display = "none"
+                success = true;
+            }
+
+            if (data1 != '' && data2 != '' && data3 != '' && data4 != '' && data5 != '' && data6 != '' && data7 != '') {
+                alert('form is submitted')
             }
         }
     </script>
